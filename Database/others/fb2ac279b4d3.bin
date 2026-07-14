@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" class="w-full h-full">
+            <defs>
+              <!-- Background & Ambient Glow Filters -->
+              <radialGradient id="bg-glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#142230" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#05080c" stop-opacity="0"/>
+              </radialGradient>
+
+              <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+              </filter>
+
+              <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+
+              <!-- Metallic Face Gradients -->
+              <linearGradient id="metal-face-tall" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop id="face-tall-s1" offset="0%" stop-color="#2e200a"/>
+                <stop id="face-tall-s2" offset="25%" stop-color="#543b12"/>
+                <stop id="face-tall-s3" offset="50%" stop-color="#9e7938"/>
+                <stop id="face-tall-s4" offset="70%" stop-color="#d6b25e"/>
+                <stop id="face-tall-s5" offset="100%" stop-color="#4f3915"/>
+              </linearGradient>
+
+              <linearGradient id="metal-face-left" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop id="face-left-s1" offset="0%" stop-color="#b59145"/>
+                <stop id="face-left-s2" offset="40%" stop-color="#735824"/>
+                <stop id="face-left-s3" offset="80%" stop-color="#423111"/>
+                <stop id="face-left-s4" offset="100%" stop-color="#211704"/>
+              </linearGradient>
+
+              <!-- Bevel & Chamfer Gradients -->
+              <linearGradient id="bevel-bright-top" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop id="bevel-top-s1" offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                <stop id="bevel-top-s2" offset="30%" stop-color="#ffeed1" stop-opacity="0.8"/>
+                <stop id="bevel-top-s3" offset="100%" stop-color="#b8944d" stop-opacity="0.3"/>
+              </linearGradient>
+
+              <linearGradient id="bevel-bright-left" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop id="bevel-left-s1" offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                <stop id="bevel-left-s2" offset="50%" stop-color="#e8ca8b" stop-opacity="0.5"/>
+                <stop id="bevel-left-s3" offset="100%" stop-color="#6b511f" stop-opacity="0.1"/>
+              </linearGradient>
+
+              <linearGradient id="bevel-shadow-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#050a12" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#1c3347" stop-opacity="0.2"/>
+              </linearGradient>
+
+              <linearGradient id="bevel-shadow-down" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#03070d" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#1b2f40" stop-opacity="0.1"/>
+              </linearGradient>
+
+              <linearGradient id="bevel-highlight-inner" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop id="bevel-inner-s1" offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+                <stop id="bevel-inner-s2" offset="40%" stop-color="#dbbc76" stop-opacity="0.5"/>
+                <stop id="bevel-inner-s3" offset="100%" stop-color="#3b2b0c" stop-opacity="0.1"/>
+              </linearGradient>
+
+              <!-- Window Interior Gradients -->
+              <linearGradient id="window-inner-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop id="window-right-s1" offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                <stop id="window-right-s2" offset="100%" stop-color="#a8894d" stop-opacity="0.4"/>
+              </linearGradient>
+              <linearGradient id="window-inner-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop id="window-bottom-s1" offset="0%" stop-color="#e3c381" stop-opacity="0.8"/>
+                <stop id="window-bottom-s2" offset="100%" stop-color="#423114" stop-opacity="0.9"/>
+              </linearGradient>
+
+              <!-- Base Platform Gradients -->
+              <linearGradient id="base-top" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1a1c1e"/>
+                <stop offset="50%" stop-color="#3a3d40"/>
+                <stop offset="100%" stop-color="#141517"/>
+              </linearGradient>
+              <linearGradient id="base-front" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#2d3033"/>
+                <stop offset="20%" stop-color="#1f2122"/>
+                <stop offset="100%" stop-color="#0b0c0d"/>
+              </linearGradient>
+              <linearGradient id="base-bevel" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0d0e0f"/>
+                <stop offset="50%" stop-color="#55595c"/>
+                <stop offset="100%" stop-color="#08090a"/>
+              </linearGradient>
+
+              <!-- Clip Paths for Face Texture Mapping -->
+              <clipPath id="left-block-clip">
+                <polygon points="98,792 98,442 352,612 352,792"/>
+              </clipPath>
+              <clipPath id="tall-block-clip">
+                <polygon points="408,792 408,242 752,69 752,738 892,738 892,792 668,792 668,368 612,368 612,792 548,792 548,368 492,368 492,792"/>
+              </clipPath>
+            </defs>
+
+            <!-- Base platform -->
+            <g id="base-platform">
+              <polygon points="40,798 960,798 950,804 50,804" fill="url(#base-bevel)"/>
+              <polygon points="50,804 950,804 950,828 50,828" fill="url(#base-front)"/>
+              <polygon points="50,828 950,828 942,832 58,832" fill="#0c0d0e"/>
+              <path d="M 60,812 Q 300,806 600,818 T 940,810" stroke="#44484c" stroke-width="1.5" fill="none" opacity="0.15"/>
+            </g>
+
+            <!-- Main Scene Render -->
+            <g filter="url(#soft-shadow)">
+              <!-- Left House Block -->
+              <g id="left-block">
+                <polygon points="90,800 90,430 98,442 98,792" fill="url(#bevel-bright-left)"/>
+                <polygon points="90,430 360,610 352,612 98,442" fill="url(#bevel-bright-top)"/>
+                <polygon points="360,610 360,800 352,792 352,612" fill="url(#bevel-shadow-right)"/>
+                <polygon points="90,800 360,800 352,792 98,792" fill="url(#bevel-shadow-down)"/>
+
+                <path d="M 98,792 L 98,442 L 352,612 L 352,792 Z M 195,670 L 195,750 L 255,750 L 255,670 Z" fill="url(#metal-face-left)" fill-rule="evenodd"/>
+
+                <!-- Brushed Metal Texture Overlay -->
+                <g clip-path="url(#left-block-clip)">
+                  <g opacity="0.06">
+                    <line x1="120" y1="400" x2="120" y2="800" stroke="#ffffff" stroke-width="1"/>
+                    <line x1="150" y1="400" x2="150" y2="800" stroke="#ffffff" stroke-width="1.5"/>
+                    <line x1="180" y1="400" x2="180" y2="800" stroke="#ffffff" stroke-width="0.8"/>
+                    <line x1="220" y1="400" x2="220" y2="800" stroke="#ffffff" stroke-width="1.2"/>
+                    <line x1="270" y1="400" x2="270" y2="800" stroke="#ffffff" stroke-width="1.7"/>
+                  </g>
+                  <circle cx="200" cy="600" r="150" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.04"/>
+                  <circle cx="200" cy="600" r="220" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.03"/>
+                </g>
+
+                <!-- Window Inner Depth -->
+                <rect x="195" y="670" width="60" height="80" fill="#ffffff" opacity="0.95"/>
+                <polygon points="195,670 195,750 210,735 210,685" fill="#0a121a"/>
+                <polygon points="195,670 255,670 240,685 210,685" fill="#060b10"/>
+                <polygon points="195,750 255,750 240,735 210,735" fill="url(#window-inner-bottom)"/>
+                <polygon points="255,670 255,750 240,735 240,685" fill="url(#window-inner-right)"/>
+              </g>
+
+              <!-- Tall Monolith (M-L Shape) -->
+              <g id="tall-block">
+                <polygon points="400,800 400,230 408,242 408,792" fill="url(#bevel-bright-left)"/>
+                <polygon points="400,230 760,60 752,69 408,242" fill="url(#bevel-bright-top)"/>
+                <polygon points="760,60 760,730 752,738 752,69" fill="url(#bevel-shadow-right)"/>
+                <polygon points="760,730 900,730 892,738 752,738" fill="url(#bevel-bright-top)"/>
+                <polygon points="900,730 900,800 892,792 892,738" fill="url(#bevel-shadow-right)"/>
+                
+                <polygon points="400,800 500,800 492,792 408,792" fill="url(#bevel-shadow-down)"/>
+                <polygon points="540,800 620,800 612,792 548,792" fill="url(#bevel-shadow-down)"/>
+                <polygon points="660,800 900,800 892,792 668,792" fill="url(#bevel-shadow-down)"/>
+
+                <!-- Slots -->
+                <polygon points="500,800 500,360 492,368 492,792" fill="url(#bevel-shadow-right)"/>
+                <polygon points="500,360 540,360 548,368 492,368" fill="url(#bevel-shadow-down)"/>
+                <polygon points="540,360 540,800 548,792 548,368" fill="url(#bevel-highlight-inner)"/>
+
+                <polygon points="620,800 620,360 612,368 612,792" fill="url(#bevel-shadow-right)"/>
+                <polygon points="620,360 660,360 668,368 612,368" fill="url(#bevel-shadow-down)"/>
+                <polygon points="660,360 660,800 668,792 668,368" fill="url(#bevel-highlight-inner)"/>
+
+                <!-- Front Face -->
+                <path d="M 408,792 L 408,242 L 752,69 L 752,738 L 892,738 L 892,792 L 668,792 L 668,368 L 612,368 L 612,792 L 548,792 L 548,368 L 492,368 L 492,792 Z" fill="url(#metal-face-tall)"/>
+
+                <!-- Brushed Metal Texture Overlay -->
+                <g clip-path="url(#tall-block-clip)">
+                  <g opacity="0.08">
+                    <line x1="420" y1="50" x2="420" y2="800" stroke="#ffffff" stroke-width="1.2"/>
+                    <line x1="480" y1="50" x2="480" y2="800" stroke="#ffffff" stroke-width="1.5"/>
+                    <line x1="580" y1="300" x2="580" y2="800" stroke="#ffffff" stroke-width="1.6"/>
+                    <line x1="680" y1="50" x2="680" y2="800" stroke="#ffffff" stroke-width="1.4"/>
+                    <line x1="740" y1="50" x2="740" y2="800" stroke="#ffffff" stroke-width="1.7"/>
+                  </g>
+                  <g fill="none" stroke="#ffffff" opacity="0.05">
+                    <circle cx="580" cy="450" r="140" stroke-width="1.2"/>
+                    <circle cx="580" cy="450" r="260" stroke-width="1.5"/>
+                    <circle cx="580" cy="450" r="380" stroke-width="1.3"/>
+                    <circle cx="580" cy="450" r="500" stroke-width="0.7"/>
+                  </g>
+                </g>
+              </g>
+
+              <!-- Highlights -->
+              <g id="specular-highlights" filter="url(#subtle-glow)">
+                <line x1="98" y1="442" x2="352" y2="612" stroke="#ffffff" stroke-width="1.5" opacity="0.75"/>
+                <circle cx="98" cy="442" r="2.5" fill="#ffffff" opacity="0.9"/>
+                <line x1="408" y1="242" x2="752" y2="69" stroke="#ffffff" stroke-width="1.8" opacity="0.85"/>
+                <circle cx="752" cy="69" r="3.5" fill="#ffffff" opacity="0.95"/>
+                <line x1="752" y1="59" x2="752" y2="79" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+                <line x1="742" y1="69" x2="762" y2="69" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+                <line x1="752" y1="738" x2="892" y2="738" stroke="#ffffff" stroke-width="1.2" opacity="0.65"/>
+              </g>
+            </g>
+          </svg>

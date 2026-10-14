@@ -1,0 +1,9 @@
+{
+  "appId": "com.namaku.duahati",
+  "appName": "luvv archive",
+  "apiBase": "https://apps.xcute.workers.dev",
+  "themeColor": "#1A237E",
+  "contactUrl": "",
+  "nativeHttp": false,
+  "emojiSet": "apple"
+}
